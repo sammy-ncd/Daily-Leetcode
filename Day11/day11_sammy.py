@@ -28,3 +28,14 @@ def minPairSum(nums):
 
 print(minPairSum([3,5,2,3]))
 print(minPairSum([3,5,4,2,4,6]))
+
+
+"""
+
+Time complexity:
+O(nlogn) majority of the time is in the sorting
+
+Space complexity:
+O(1) just a few ints stored
+
+"""
