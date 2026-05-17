@@ -33,3 +33,19 @@ int findNumbers(vector<int>& nums) {
     
     return amount;   
 }
+
+/*
+
+Time Complexity:
+
+O(n * d) where d is the number of digits per integer
+
+converting the number to a string is time proportional to the number of digits in this number.
+
+
+Space Complexity:
+
+O(d) where d is number of digits per number
+
+
+*/
