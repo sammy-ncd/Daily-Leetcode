@@ -25,9 +25,12 @@ def twoSum(numbers, target):
     j = len(numbers) - 1
 
     while i < j:
-        if numbers[i] + numbers[j] < target:
+
+        sum = numbers[i] + numbers[j]
+
+        if sum < target:
             i += 1
-        elif numbers[i] + numbers[j] > target:
+        elif sum > target:
             j -= 1
         else:
             return [i + 1, j + 1]
