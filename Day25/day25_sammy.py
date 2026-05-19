@@ -23,7 +23,7 @@ return -1 if no common minimum
 def getCommon(nums1, nums2):
     
     i = j = 0
-
+    
     while i < len(nums1) and j < len(nums2):
         x, y = nums1[i], nums2[j] 
 
@@ -43,8 +43,9 @@ Time Complexity:
 let n be the length of nums1
 len m be the length of nums2
 
-overall runtime is gonna be the length of the larger list
-so overall ---> O(max(m, n))
+overall runtime is gonna be the length of the smaller list
+because we run out of numbers to check at this point
+so overall ---> O(min(m, n))
 
 
 Space Complexity:
