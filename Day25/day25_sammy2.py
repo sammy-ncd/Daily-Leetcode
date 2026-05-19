@@ -10,7 +10,7 @@ https://leetcode.com/problems/robot-return-to-origin/description/?envType=daily-
 """
 
 Approach:
-Check that we have performed both same number of up and down moves as well and left and right moves.
+Check that we have performed both same number of up and down moves as well as left and right moves.
 
 """
 
