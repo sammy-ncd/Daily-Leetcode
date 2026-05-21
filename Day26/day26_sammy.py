@@ -62,9 +62,6 @@ def minTimeToVisitAllPoints_BruteForce(points):
 def minTimeToVisitAllPoints(points):
 
     n = len(points)
-
-    if n == 1:
-        return 0
     
     time = 0
 
