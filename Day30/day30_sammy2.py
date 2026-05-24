@@ -39,7 +39,10 @@ Time complexity:
 we do the swapping for all nodes in the tree so overall ----> O(n)
 
 Space complexity:
-no additional memory used ---> overall O(1)
+no additional memory used ---> overall O(1) XXXX
+
+correction: in the case of a skewed tree the recursion stack holds all nodes
+            so overall ---> O(n)
 
 
 """
