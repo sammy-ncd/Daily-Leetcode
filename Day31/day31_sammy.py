@@ -69,6 +69,36 @@ class Trie(object):
         return True
     
 
+# Just some chat gpt code to visualize the trie
+
+def print_trie(node, prefix="", label="ROOT", is_last=True):
+    marker = " *" if node.isWordNode else ""
+    print(prefix + label + marker)
+
+    children = list(node.children.items())
+
+    for i in range(len(children)):
+        char, child = children[i]
+        last_child = i == len(children) - 1
+
+        branch = "└── " if last_child else "├── "
+        next_prefix = prefix + ("    " if is_last else "│   ")
+
+        print_trie(child, next_prefix, branch + char, last_child)
+
+
+# test trie to visualize
+
+trie = Trie()
+
+words = ["cat", "car", "cart", "dog", "door", "dot"]
+
+for word in words:
+    trie.insert(word)
+
+print_trie(trie)
+    
+
 """
 
 Time Complexity:
