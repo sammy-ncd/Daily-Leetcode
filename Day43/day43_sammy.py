@@ -51,6 +51,7 @@ class MinStack(object):
     def top(self):
         return self.data[-1]
 
+
     def getMin(self):
         return self.minValue
     
