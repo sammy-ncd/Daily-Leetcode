@@ -37,9 +37,9 @@ def assignEdgeWeights(edges):
         vis[curr] = True
     
         max_depth = max(max_depth, depth)
-        for n in adj[curr]:
-            if not vis[n]:
-                stack.append((n, depth + 1))
+        for neigh in adj[curr]:
+            if not vis[neigh]:
+                stack.append((neigh, depth + 1))
         
     return pow(2, max_depth - 1) % MOD
 
