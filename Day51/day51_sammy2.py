@@ -115,15 +115,16 @@ class MyLinkedList(object):
 
 Time:
 
-O(1) add at head
-O(1) add at tail
-O(n) general insert
-O(n) general remove
+O(n) get
+O(1) addAtHead
+O(1) addAtTail
+O(n) addAtIndex
+O(n) deleteAtIndex
 
 
 Space:
 
-O(1) init 
-
+O(1) extra space per operation
+O(n) total space for the linked list
 
 """
