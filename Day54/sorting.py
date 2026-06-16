@@ -36,3 +36,56 @@ def insertionSort(nums):
 # print(insertionSort([3,4,5,1,6]))
 # print(insertionSort([1]))
 # print(insertionSort([6,5,4,3,2,1]))
+
+
+
+def merge(arr, start, mid, end):
+
+    l1 = [arr[i] for i in range(start, mid)]
+    l2 = [arr[i] for i in range(mid, end)]
+    i = j = 0
+    k = start
+
+    while i < len(l1) and j < len(l2):
+        if l1[i] <= l2[j]:
+            arr[k] = l1[i]
+            i += 1
+        else:
+            arr[k] = l2[j]
+            j += 1
+            
+        k += 1
+
+    while i < len(l1):
+        arr[k] = l1[i]
+        k += 1
+        i += 1
+
+    while j < len(l2):
+        arr[k] = l2[j]
+        k += 1
+        j += 1
+
+    return arr
+
+
+def mergeSort(arr, start, end):
+
+    if (end - start) <= 1:
+        return arr
+    
+    mid = (start + end) // 2
+    
+    mergeSort(arr, start, mid)
+    mergeSort(arr, mid, end)
+
+    merge(arr, start, mid, end)
+
+    return arr
+
+arr = [1,2,3,1,3,4]
+start = 0
+end = len(arr)
+mid = (start + end) // 2
+print(merge(arr, start, mid, end))
+print(mergeSort([6,5,4,3,2,1], start, end))
