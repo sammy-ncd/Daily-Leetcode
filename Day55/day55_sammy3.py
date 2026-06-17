@@ -39,15 +39,7 @@ class Solution(object):
                 list2 = list2.next
             dummy = dummy.next
 
-        while list1:
-            dummy.next = list1
-            dummy = dummy.next
-            list1 = list1.next
-
-        while list2:
-            dummy.next = list2
-            dummy = dummy.next
-            list2 = list2.next     
+        dummy.next = list1 if list1 else list2
 
         return head.next.next
     
