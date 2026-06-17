@@ -69,6 +69,7 @@ def merge(arr, start, mid, end):
     return arr
 
 
+# Time O(nlogn), Space O(n)
 def mergeSort(arr, start, end):
 
     if (end - start) <= 1:
@@ -83,9 +84,9 @@ def mergeSort(arr, start, end):
 
     return arr
 
-arr = [1,2,3,1,3,4]
-start = 0
-end = len(arr)
-mid = (start + end) // 2
-print(merge(arr, start, mid, end))
-print(mergeSort([6,5,4,3,2,1], start, end))
+# arr = [1,2,3,1,3,4]
+# start = 0
+# end = len(arr)
+# mid = (start + end) // 2
+# print(merge(arr, start, mid, end))
+# print(mergeSort([6,5,4,3,2,1], start, end))
