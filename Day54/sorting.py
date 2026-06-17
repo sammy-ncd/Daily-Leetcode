@@ -90,3 +90,36 @@ def mergeSort(arr, start, end):
 # mid = (start + end) // 2
 # print(merge(arr, start, mid, end))
 # print(mergeSort([6,5,4,3,2,1], start, end))
+
+
+# Time: worst O(n^2) avg (Onlogn) Space: O(1)
+def quickSort(arr, start, end):
+
+    if (end - start) + 1 <= 1:
+        return arr
+    
+    # There are better ways of picking the pivot, this is just for simplicity
+    pivot = arr[end]
+    swap = start
+
+    for i in range(start, end):
+        if arr[i] < pivot:
+            temp = arr[swap]
+            arr[swap] = arr[i]
+            arr[i] = temp
+            swap += 1
+
+    # swapping point ends at the point where all things to the left of swap are < pivot and all things to the right of swap are > pivot
+    arr[end] = arr[swap]
+    arr[swap] = pivot
+
+    quickSort(arr, start, swap - 1)
+    quickSort(arr, swap + 1, end)
+
+    return arr 
+
+
+# arr = [1,2,3,1,3,4]
+# start = 0
+# end = len(arr) - 1
+# print(quickSort(arr, start, end))
