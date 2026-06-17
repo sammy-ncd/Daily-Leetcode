@@ -123,3 +123,23 @@ def quickSort(arr, start, end):
 # start = 0
 # end = len(arr) - 1
 # print(quickSort(arr, start, end))
+
+
+# Time O(n), sapce O(1), requirements is for there to be values only within a finite range
+def bucketSort(arr):
+
+    # assuming arr only has values 0,1,2
+    counts = [0,0,0]
+
+    for num in arr:
+        counts[num] += 1
+
+    j = 0
+    for i in range(len(counts)):
+        for _ in range(counts[i]):
+            arr[j] = i
+            j += 1
+    
+    return arr
+
+# print(bucketSort([1,0,1,2]))
