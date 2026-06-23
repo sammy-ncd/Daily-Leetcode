@@ -27,18 +27,18 @@ class TreeNode(object):
 
 def sortedArrayToBST(nums):
 
-    def buildTree(nums):
+    def buildTree(start, end):
 
-        if len(nums) == 0:
+        if start > end:
             return None
         
-        mid = len(nums) // 2
+        mid = (end + start) // 2
         root = TreeNode(nums[mid])
-        root.left = buildTree(nums[0:mid])
-        root.right = buildTree(nums[mid+1:])
+        root.left = buildTree(start, mid - 1)
+        root.right = buildTree(mid + 1, end)
         return root
-    
-    return buildTree(nums)
+   
+    return buildTree(0, len(nums) - 1)
 
 
 
