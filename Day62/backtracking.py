@@ -34,4 +34,10 @@ If none of the move works out, return false, NO SOLUTON.
 
 
 
+
+note to self:
+draw the decision/recursion tree if you're struggling
+and think about base cases
+
+
 """
