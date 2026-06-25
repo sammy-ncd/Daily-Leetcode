@@ -14,6 +14,11 @@ base case: stop when we finish looping through all digits
 choices: for each letter mapped to a digit pick one and move on
 no need to pop because we want every single combo
 
+index = current digit index
+for each letter mapped to digits[index]:
+    add that letter
+    recurse to next digit
+
 
 """
 
