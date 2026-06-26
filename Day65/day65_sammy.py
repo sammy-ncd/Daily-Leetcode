@@ -12,7 +12,7 @@ Approach:
 flatten matrix into an array and sort it
 take the median
 for each element in the array see if we can convert it into the median (all numbers must have the same remainder mod x)
-if we can add the number of operations it will take to ops
+if we can, add the number of operations it will take to ops
 otherwise return -1
 
 
