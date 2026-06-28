@@ -20,13 +20,13 @@ could also use a circular array
 
 class Node:
     
+
     def __init__(self, prev, val, next):
         self.prev = prev
         self.val = val
         self.next = next
 
 class MyCircularDeque:
-
 
 
     def __init__(self, k: int):
