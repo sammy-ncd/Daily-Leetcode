@@ -42,7 +42,7 @@ Optimal:
 why its possible because gcd(sumOdd, sumEven) = n
 because they are coprime gcd(n, n+1) = 1
 
-Time and space O(n)
+Time and space O(1)
 
 
 """
