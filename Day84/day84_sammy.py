@@ -22,6 +22,9 @@ import math
 def gcdOfOddEvenSums(n: int) -> int:
     return math.gcd(n**2, n*(n+1))
 
+def gcdOfOddEvenSums_optimal(n):
+    return n
+
 
 """
 
@@ -33,6 +36,13 @@ depends on how long it takes to compute the gcd, so overall ---> O(gcd(sumOdd, s
 Space complexity:
 
 nothing stored so overall ---> O(1)
+
+Optimal:
+
+why its possible because gcd(sumOdd, sumEven) = n
+because they are coprime gcd(n, n+1) = 1
+
+Time and space O(n)
 
 
 """
