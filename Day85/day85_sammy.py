@@ -17,6 +17,7 @@ to optimally find the max keep a current max and compare as we traverse nums
 
 import math
 
+
 def gcdSum(nums: list[int]) -> int:
     prefixGcd = []
     maxSoFar = 0
