@@ -17,22 +17,22 @@ get max num and second max num finally compute what is needed
 
 
 def maxProduct(nums) -> int:
-    maxNumIdx = 0
+    max1 = 0
+    max2 = 0
     for i in range(len(nums)):
-        if nums[i] > nums[maxNumIdx]:
-            maxNumIdx = i
-    secondMaxNum = 0
-    for i in range(len(nums)):
-        if i != maxNumIdx:
-            secondMaxNum = max(secondMaxNum, nums[i])
-    return (nums[maxNumIdx]-1)*(secondMaxNum-1)
+        if nums[i] >= max1:
+            max2 = max1
+            max1 = nums[i]
+        elif nums[i] >= max2:
+            max2 = nums[i]
+    return (max1-1)*(max2-1)
 
 
 """
 
 Time complexity:
 
-2 linear scans, so overall ----> O(n)
+one linear scan, so overall ----> O(n)
 
 
 Space complexity:
